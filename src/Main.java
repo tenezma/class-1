@@ -16,5 +16,7 @@ public class Main {
         System.out.println("Автор = " + bookTwo.getAuthor().getName() + " " + bookTwo.getAuthor().getSurname());
         bookTwo.setPublishYear(2010);
         System.out.println("Год пуликации (новой) = " +bookTwo.getPublishYear());
+        System.out.println(bookOne);
+        System.out.println(bookTwo);
     }
 }
