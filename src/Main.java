@@ -1,18 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        Book onebook = new Book("Вий", 1990,"Гоголь");               // контруктор кл Book
-        Author onebookAuthor = new Author ("Николай","Гоголь");              //конструктор кл Author
-        System.out.println("onebook.nameBook = " + onebook.getNameBook());
-        System.out.println("onebook.year = " + onebook.getPublishYear());
-        System.out.println("onebookAuthor.name = " + onebookAuthor.getName()+" "+onebookAuthor.getSurname());
-        Book secondBook = new Book("Нос", 1989,"Гоголь");               // контруктор кл Book
-        Author secondAuthor = new Author("Николай","Гоголь");                   //конструктор кл Author
-        System.out.println("secondBook.getNameBook() = " + secondBook.getNameBook());
-        System.out.println("secondBook.getPublishYear() = " + secondBook.getPublishYear());
-        System.out.println("secondAuthor.getName() = " + secondAuthor.getName()+" "+secondAuthor.getSurname());
-        onebook.setPublishYear(2012);
-        System.out.println("onebook.getPublishYear() = " + onebook.getPublishYear());
-
-
+        Author authorOne=new Author ("Александр","Пушкин");
+        System.out.println("Автор = " + authorOne.getName() + " " + authorOne.getSurname());
+        Book bookOne=new Book("Капитанская дочь",1990,authorOne);
+        System.out.println("Название произведения: "+ bookOne.getNameBook());
+        System.out.println("Год публикации "+ bookOne.getPublishYear());
+        System.out.println("Автор = " + bookOne.getAuthor().getName() + " " + bookOne.getAuthor().getSurname());
+        bookOne.setPublishYear(2022);
+        System.out.println("Год пуликации (новой) = " + bookOne.getPublishYear());
+        Author authorTwo=new Author("Михаил","Булгаков");
+        System.out.println("Автор = "+authorTwo.getName() +" "+ authorTwo.getSurname());
+        Book bookTwo = new Book("Морфий",1991,authorTwo);
+        System.out.println("Название произведения: "+ bookTwo.getNameBook());
+        System.out.println("Год публикации "+ bookTwo.getPublishYear());
+        System.out.println("Автор = " + bookTwo.getAuthor().getName() + " " + bookTwo.getAuthor().getSurname());
+        bookTwo.setPublishYear(2010);
+        System.out.println("Год пуликации (новой) = " +bookTwo.getPublishYear());
     }
 }
